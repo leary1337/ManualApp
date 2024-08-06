@@ -1,26 +1,28 @@
 import './App.css'
 
-import WebApp from '@twa-dev/sdk'
-import { useState } from 'react'
+import { Section, updateSection } from './api';
+
+import { AppRoot } from '@telegram-apps/telegram-ui'
+import NavigationBar from './components/NavigationBar'
+import SectionList from './components/SectionList';
+import { retrieveLaunchParams } from '@telegram-apps/sdk';
+import { useState } from 'react';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [selectedSection, setSelectedSection] = useState<Section>();
+  // const { initDataRaw, initData } = retrieveLaunchParams();
+  // console.log(initDataRaw, initData)
 
+  // console.log(initData?.user?.id)
   return (
-    <>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
-      {/* Here we add our button with alert callback */}
-      <div className="card">
-        <button onClick={() => WebApp.showAlert(`Hello World! Current count is ${count}`)}>
-          Show Alert
-        </button>
-      </div>
-    </>
+    <AppRoot>
+      <NavigationBar selectedSection={selectedSection} onClick={setSelectedSection} />
+      <SectionList
+        selectedSection={selectedSection}
+        onClick={setSelectedSection}
+      />
+
+    </AppRoot>
   )
 }
 

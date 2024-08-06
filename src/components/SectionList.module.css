@@ -1,0 +1,70 @@
+.sectionList {
+    padding: 20px;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: auto;
+    text-align: center; /* Центрируем текст */
+}
+
+.createButton {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.createButton:hover {
+    background-color: #0056b3;
+}
+
+.sectionItems {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sectionItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #2c2c2c;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.sectionLink {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.sectionLink:hover {
+    text-decoration: underline;
+}
+
+.sectionActions {
+    display: flex;
+    gap: 10px;
+}
+
+.editButton, .deleteButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #ffffff;
+    padding: 5px;
+}
+
+.editButton:hover {
+    color: #ffa500;
+}
+
+.deleteButton:hover {
+    color: #ff0000;
+}

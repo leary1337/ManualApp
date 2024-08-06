@@ -7,5 +7,8 @@ export default defineConfig({
   build: {
     outDir: './docs'
   },
+  server: {
+    https: false
+  },
   base: './'
 });
