@@ -1,11 +1,9 @@
 import './App.css'
 
-import { Section, updateSection } from './api';
-
 import { AppRoot } from '@telegram-apps/telegram-ui'
 import NavigationBar from './components/NavigationBar'
+import { Section } from './api';
 import SectionList from './components/SectionList';
-import { retrieveLaunchParams } from '@telegram-apps/sdk';
 import { useState } from 'react';
 
 function App() {
